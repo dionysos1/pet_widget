@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-
 class Pet {
   Pet({
     required this.id,
@@ -37,12 +35,10 @@ class Pet {
     );
   }
 
-  printout() {
-    debugPrint("$name : $birthDate - $deathDate");
-  }
   static empty(){
     return Pet(id: 0, name: '', birthDate: DateTime(0000, 1, 1), deathDate: DateTime(0000, 1, 1), image: '');
   }
+
   static random(){
     return Pet(
         id: Random().nextInt(3000),
