@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pet_widget/pet_home.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  runApp(const PetApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class PetApp extends StatelessWidget {
+  const PetApp({super.key});
 
   @override
   Widget build(BuildContext context) {

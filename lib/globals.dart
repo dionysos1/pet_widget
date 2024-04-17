@@ -3,7 +3,7 @@ library globals;
 import 'dart:io';
 import 'package:pet_widget/pet_class.dart';
 
-List<Pet> items = [];
+List<Pet> allPets = [];
 File? selectedImage;
 
 extension StringExtension on String {

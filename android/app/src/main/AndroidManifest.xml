@@ -4,7 +4,7 @@
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:label="pet_widget">
+        android:label="Pet Tracker">
         <receiver
             android:name=".PetHomeScreenWidget"
             android:exported="false">
