@@ -90,6 +90,7 @@ class _PetHomeState extends State<PetHome> {
                       final Pet movedPet = allPets.removeAt(oldIndex);
                       allPets.insert(newIndex, movedPet);
                       savePets(); // Save the updated list after reordering
+                      allPets.isNotEmpty ? updateHeadline(allPets[0]) : null;
                     });
                   },
                 ),

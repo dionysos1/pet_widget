@@ -15,21 +15,30 @@ import 'globals.dart';
 
 /// calculates the age to show in the trailing text of the list
 String ageCalc(Pet petToCalcAge) {
-  if (petToCalcAge.birthDate == DateTime(0000)) {
+  if (petToCalcAge.birthDate.year == 0) {
     return '';
   }
-  Duration ageDuration = const Duration(days: 0);
-  if (petToCalcAge.deathDate == DateTime(0000)) {
-    ageDuration = DateTime.now().difference(petToCalcAge.birthDate);
-  } else {
-    ageDuration = petToCalcAge.deathDate.difference(petToCalcAge.birthDate);
+
+  DateTime endDate = petToCalcAge.deathDate.year == 0
+      ? DateTime.now()
+      : petToCalcAge.deathDate;
+
+  int years = endDate.year - petToCalcAge.birthDate.year;
+  int months = endDate.month - petToCalcAge.birthDate.month;
+  int days = endDate.day - petToCalcAge.birthDate.day;
+
+  // Adjust months and years if necessary
+  if (days < 0) {
+    months -= 1;
+    days += DateTime(endDate.year, endDate.month, 0).day;
   }
 
-  int years = ageDuration.inDays ~/ 365;
-  int remainingDays = ageDuration.inDays % 365;
-  int months = remainingDays ~/ 30;
-  int days = remainingDays % 30;
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
 
+  // Construct the result string
   String ageText = '';
   if (years > 0) {
     ageText += '$years years';
@@ -43,6 +52,7 @@ String ageCalc(Pet petToCalcAge) {
   if (ageText.isEmpty) {
     ageText = 'Today';
   }
+
   return ageText;
 }
 
