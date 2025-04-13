@@ -17,6 +17,8 @@ import 'package:pet_widget/globals.dart';
 import 'package:pet_widget/utils.dart';
 import 'package:pet_widget/pet_class.dart';
 
+import 'main.dart';
+
 const String appGroupId = 'group.petwidget';
 const String iOSWidgetName = 'pet_widget';
 const String androidWidgetName = 'PetHomeScreenWidget';
@@ -126,6 +128,35 @@ class _PetHomeState extends State<PetHome> {
                         ],
                       ),
                     ),
+                  ),
+
+                if (kDebugMode)
+                  Positioned(
+                    bottom: 15,
+                    left: 150,
+                    child: TextButton(
+                      onPressed: () {
+                        testNotification();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all<Color>(
+                            Colors.orangeAccent),
+                        foregroundColor:
+                        WidgetStateProperty.all<Color>(Colors.black),
+                        elevation: WidgetStateProperty.all<double>(10),
+                        shape: WidgetStateProperty.all<OutlinedBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(13.0),
+                          ),
+                        ),
+                      ),
+                      child: const Column(
+                        children: [
+                          Icon(Icons.list_alt),
+                          Text('Debug: send notification')
+                        ],
+                      ),
+                    ),
                   )
               ],
             )
@@ -157,6 +188,7 @@ class _PetHomeState extends State<PetHome> {
       allPets = petListJson
           .map((petJson) => Pet.fromJson(json.decode(petJson)))
           .toList();
+      await scheduleAllPetBirthdays();
       setState(() {
         petsLoaded = true;
       });
@@ -164,6 +196,13 @@ class _PetHomeState extends State<PetHome> {
       setState(() {
         petsLoaded = true;
       });
+    }
+  }
+
+  /// schedule notifications
+  Future<void> scheduleAllPetBirthdays() async {
+    for (Pet pet in allPets) {
+      await scheduleBirthdayNotification(pet);
     }
   }
 
@@ -182,6 +221,14 @@ class _PetHomeState extends State<PetHome> {
   void editPet(int id, Pet editedPet) {
     final int index = allPets.indexWhere((pet) => pet.id == id);
 
+    if (editedPet.deathDate.year != 0) {
+      notificationsPlugin.cancel(editedPet.id);
+      if (kDebugMode) {
+        print('Canceled birthday notification for deceased pet: ${editedPet
+            .name}');
+      }
+    }
+
     if (index != -1) {
       setState(() {
         allPets[index] = editedPet;
@@ -196,6 +243,8 @@ class _PetHomeState extends State<PetHome> {
   /// delete pet from list
   void deletePet(int id) {
     final int index = allPets.indexWhere((pet) => pet.id == id);
+
+    notificationsPlugin.cancel(id);
 
     if (index != -1) {
       setState(() {

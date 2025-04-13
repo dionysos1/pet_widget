@@ -6,12 +6,17 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:pet_widget/pet_class.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:timezone/timezone.dart' as tz;
 
 import 'globals.dart';
+import 'main.dart';
 
 /// calculates the age to show in the trailing text of the list
 String ageCalc(Pet petToCalcAge) {
@@ -171,8 +176,8 @@ Future<void> importJsonFromFile(
     BuildContext context, Function() callback) async {
   // Get file path from user using file_picker
   FilePickerResult? selectedJsonFile = await FilePicker.platform.pickFiles(
-    type: FileType.custom,
-    allowedExtensions: ['json'],
+    // type: FileType.custom,
+    // allowedExtensions: ['json'],
   );
 
   List<Pet> originalList = allPets;
@@ -309,4 +314,94 @@ Future<File> _getImage(ImageSource source) async {
   }
 
   throw Exception('Image selection was canceled.');
+}
+
+Future<bool> requestExactAlarmPermission() async {
+  if (await Permission.scheduleExactAlarm.isDenied) {
+    await Permission.scheduleExactAlarm.request();
+  }
+  return Permission.scheduleExactAlarm.isGranted;
+}
+
+/// schedule notifications every year
+Future<void> scheduleBirthdayNotification(Pet pet) async {
+  final now = tz.TZDateTime.now(tz.local);
+  if (pet.deathDate.year > 0) return;
+  tz.TZDateTime scheduledDate = tz.TZDateTime(
+    tz.local,
+    now.year,
+    pet.birthDate.month,
+    pet.birthDate.day,
+    9, // Notification time: 9 AM
+  );
+
+  if (scheduledDate.isBefore(now)) {
+    scheduledDate = tz.TZDateTime(
+      tz.local,
+      now.year + 1,
+      pet.birthDate.month,
+      pet.birthDate.day,
+      9,
+    );
+  }
+
+  await notificationsPlugin.zonedSchedule(
+    pet.id, // Unique ID for each pet
+    '🎉 Happy Birthday ${pet.name.capitalizeWords()}!',
+    '${pet.name} turns ${now.year - pet.birthDate.year} today!',
+    scheduledDate,
+    const NotificationDetails(
+      android: AndroidNotificationDetails(
+        'pet_birthday_channel',
+        'Pet Birthday Notifications',
+        channelDescription: 'Notifications for pet birthdays',
+        importance: Importance.max,
+        priority: Priority.high,
+      ),
+      iOS: DarwinNotificationDetails(),
+    ),
+    androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+    matchDateTimeComponents: null,
+  );
+}
+
+Future<void> testNotification() async {
+  print("set test notification for ${tz.TZDateTime.now(tz.local).add(const Duration(seconds: 10))}");
+  await notificationsPlugin.cancelAll();
+  if (await requestExactAlarmPermission()) {
+    await notificationsPlugin.zonedSchedule(
+      0, // Temporary notification ID
+      'Test Notification',
+      'This is a test notification.',
+      tz.TZDateTime.now(tz.local).add(const Duration(seconds: 10)),
+      // 10 seconds from now
+      const NotificationDetails(
+        android: AndroidNotificationDetails(
+          'test_channel',
+          'Test Notifications',
+          channelDescription: 'Channel for testing notifications',
+        ),
+        iOS: DarwinNotificationDetails(),
+      ),
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      matchDateTimeComponents: null,
+    );
+  } else {
+    // Permission not granted; handle gracefully
+    if (kDebugMode) {
+      print("Exact alarm permission denied.");
+    }
+  }
+}
+
+Future<void> printScheduledNotifications() async {
+  final pendingNotifications = await notificationsPlugin.pendingNotificationRequests();
+
+  for (var notification in pendingNotifications) {
+    print('Notification ID: ${notification.id}, Title: ${notification.title}, Body: ${notification.body}');
+  }
+
+  if (pendingNotifications.isEmpty) {
+    print('No scheduled notifications.');
+  }
 }
