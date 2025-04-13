@@ -5,6 +5,7 @@ import 'dart:io';
 /// material
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 /// plugins
@@ -27,14 +28,15 @@ class PetHome extends StatefulWidget {
   State<PetHome> createState() => _PetHomeState();
 }
 
-void updateHeadline(Pet petToShow) {
-  HomeWidget.saveWidgetData<String>('headline_title', petToShow.name);
-  HomeWidget.saveWidgetData<String>('headline_image', petToShow.image);
-  HomeWidget.saveWidgetData<String>('headline_description', ageCalc(petToShow));
-  HomeWidget.updateWidget(
-    iOSName: iOSWidgetName,
-    androidName: androidWidgetName,
-  );
+void updateHeadline(Pet petToShow) async {
+    HomeWidget.saveWidgetData<String>('headline_title', petToShow.name);
+    HomeWidget.saveWidgetData<String>('headline_image', petToShow.image);
+    HomeWidget.saveWidgetData<String>(
+        'headline_description', ageCalc(petToShow));
+    HomeWidget.updateWidget(
+      iOSName: iOSWidgetName,
+      androidName: androidWidgetName,
+    );
 }
 
 class _PetHomeState extends State<PetHome> {
@@ -105,12 +107,12 @@ class _PetHomeState extends State<PetHome> {
                         });
                       },
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
+                        backgroundColor: WidgetStateProperty.all<Color>(
                             Colors.orangeAccent),
                         foregroundColor:
-                            MaterialStateProperty.all<Color>(Colors.black),
-                        elevation: MaterialStateProperty.all<double>(10),
-                        shape: MaterialStateProperty.all<OutlinedBorder>(
+                            WidgetStateProperty.all<Color>(Colors.black),
+                        elevation: WidgetStateProperty.all<double>(10),
+                        shape: WidgetStateProperty.all<OutlinedBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(13.0),
                           ),

@@ -4,66 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9ed2c1c-8bb7-4df3-b2a0-c18d458808ab" name="Changes" comment="export/import functie werkt nu ook.">
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-hdpi/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-mdpi/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-night-v21/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-night-v21/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-night/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-night/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xhdpi/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxhdpi/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxxhdpi/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/circular_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night-v31/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icon/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/1024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/167.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/172.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/196.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/216.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/55.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/58.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/66.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/80.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/87.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/88.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/92.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchBackground.imageset/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchBackground.imageset/darkbackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" afterDir="false" />
+    <list default="true" id="c9ed2c1c-8bb7-4df3-b2a0-c18d458808ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/flutter udemy course_s1060679_Dion_van_den_Berg.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testlist.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
@@ -80,53 +23,10 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/nl/dion/pet_widget/PetHomeScreenWidget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/nl/dion/pet_widget/PetHomeScreenWidget.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/layout/pet_home_screen_widget.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/pet_home_screen_widget.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/globals.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/globals.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pet_class.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pet_class.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pet_home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pet_home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,13 +93,14 @@
     &quot;assignee&quot;: &quot;dionysos1&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="549a2301-96f4-4185-9d02-e62be49251bf" />
-        <option name="url" value="https://github.com/dionysos1/pet_widget" />
-      </UrlAndAccount>
-    </option>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dionysos1/pet_widget&quot;,
+    &quot;accountId&quot;: &quot;549a2301-96f4-4185-9d02-e62be49251bf&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.1/device-explorer/s22  API 33/_/mnt/user/0/emulated/0/Download/testlist.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KotlinCompilerWorkspaceSettings">
     <option name="enableDaemon" value="false" />
@@ -221,18 +122,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "G:/stackmap/PetWidget/assets/icon",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/stackmap/PetWidget",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Console",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
   }
@@ -265,6 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1692433885654</updated>
       <workItem from="1713370558812" duration="19000" />
+      <workItem from="1718444526015" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="unversioned files">
       <created>1692433975971</created>
@@ -308,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692538261881</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="export/import functie werkt nu ook.">
+      <option name="closed" value="true" />
+      <created>1713373878020</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713373878020</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
