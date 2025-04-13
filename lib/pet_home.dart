@@ -531,7 +531,7 @@ class _PetHomeState extends State<PetHome> {
         ],
       ),
       trailing: Text(ageCalc(currPet),
-          style: const TextStyle(fontSize: 10), textAlign: TextAlign.right),
+          style: const TextStyle(fontSize: 12), textAlign: TextAlign.right),
     );
   }
 }
