@@ -345,24 +345,31 @@ Future<void> scheduleBirthdayNotification(Pet pet) async {
     );
   }
 
-  await notificationsPlugin.zonedSchedule(
-    pet.id, // Unique ID for each pet
-    '🎉 Happy Birthday ${pet.name.capitalizeWords()}!',
-    '${pet.name} turns ${now.year - pet.birthDate.year} today!',
-    scheduledDate,
-    const NotificationDetails(
-      android: AndroidNotificationDetails(
-        'pet_birthday_channel',
-        'Pet Birthday Notifications',
-        channelDescription: 'Notifications for pet birthdays',
-        importance: Importance.max,
-        priority: Priority.high,
+  if (await requestExactAlarmPermission()) {
+    await notificationsPlugin.zonedSchedule(
+      pet.id, // Unique ID for each pet
+      '🎉 Happy Birthday ${pet.name.capitalizeWords()}!',
+      '${pet.name} turns ${now.year - pet.birthDate.year} today!',
+      scheduledDate,
+      const NotificationDetails(
+        android: AndroidNotificationDetails(
+          'pet_birthday_channel',
+          'Pet Birthday Notifications',
+          channelDescription: 'Notifications for pet birthdays',
+          importance: Importance.max,
+          priority: Priority.high,
+        ),
+        iOS: DarwinNotificationDetails(),
       ),
-      iOS: DarwinNotificationDetails(),
-    ),
-    androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-    matchDateTimeComponents: null,
-  );
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      matchDateTimeComponents: null,
+    );
+  } else {
+    // Permission not granted; handle gracefully
+    if (kDebugMode) {
+      print("Exact alarm permission denied.");
+    }
+  }
 }
 
 Future<void> testNotification() async {
